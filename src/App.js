@@ -15,6 +15,7 @@ function App() {
           path="/content"
           element={
             <>
+              <Nav />
               <Banner />
               <Row
                 title={"NETFLIX ORIGINALS"}
