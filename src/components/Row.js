@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from "react";
-import axios from "../axios";
 import "./Row.css";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
+import { useSelector, useDispatch } from "react-redux";
 
 const base_Url = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl, isLargeRow }) {
-  const [movies, setMovies] = useState([]);
+function Row({ title, isLargeRow, action, category }) {
   const [trailerUrl, setTrailerUrl] = useState("");
+  const movies = useSelector((state) => state.getTheMovies);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(fetchUrl);
-      setMovies(request.data.results);
-      return request;
-    }
-    fetchData();
-  }, [fetchUrl]);
+    dispatch(action());
+  }, []);
 
   const opts = {
     height: "390",
@@ -46,7 +42,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     <div className="row">
       <h2>{title}</h2>
       <div className="row__posters">
-        {movies.map((movie) => {
+        {movies.NetflixOriginals.map((movie) => {
           return (
             <img
               key={movie.id}

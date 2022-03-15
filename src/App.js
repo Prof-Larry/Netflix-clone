@@ -1,10 +1,19 @@
 import "./App.css";
 import Row from "./components/Row";
-import requests from "./requests";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
 import Login from "./components/Login";
 import { Routes, Route } from "react-router-dom";
+import {
+  fetchNetflixOriginals,
+  fetchTrending,
+  fetchTopRated,
+  fetchActionMovies,
+  fetchComedyMovies,
+  fetchHorrorMovies,
+  fetchRomanceMovies,
+  fetchDocumentaries,
+} from "./actions/index";
 
 function App() {
   return (
@@ -19,31 +28,45 @@ function App() {
               <Banner />
               <Row
                 title={"NETFLIX ORIGINALS"}
-                fetchUrl={requests.fetchNetflixOriginals}
                 isLargeRow={true}
+                action={fetchNetflixOriginals}
+                category={"NetflixOriginals"}
               />
-              <Row title={"Trending Now"} fetchUrl={requests.fetchTrending} />
-              <Row title={"Top Rated"} fetchUrl={requests.fetchTopRated} />
+              <Row
+                title={"Trending Now"}
+                action={fetchTrending}
+                category={"Trending"}
+              />
+              <Row
+                title={"Top Rated"}
+                action={fetchTopRated}
+                category={"TopRated"}
+              />
               <Row
                 title={"Action Movies"}
-                fetchUrl={requests.fetchActionMovies}
+                action={fetchActionMovies}
+                category={"ActionMovies"}
               />
               <Row
                 title={"Comedy Movies"}
-                fetchUrl={requests.fetchComedyMovies}
+                action={fetchComedyMovies}
+                category={"ComedyMovies"}
               />
               <Row
                 title={"Horror Movies"}
-                fetchUrl={requests.fetchHorrorMovies}
+                action={fetchHorrorMovies}
+                category={"HorrorMovies"}
               />
               <Row
                 title={"Romance Movies"}
-                fetchUrl={requests.fetchRomanceMovies}
+                action={fetchRomanceMovies}
+                category={"RomanceMovies"}
               />
               <Row
                 title={"Documentaries"}
-                fetchUrl={requests.fetchDocumentaries}
-              />{" "}
+                action={fetchDocumentaries}
+                category={"Documentaries"}
+              />
             </>
           }
         ></Route>
