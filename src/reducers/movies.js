@@ -1,4 +1,13 @@
-const movies = {};
+const movies = {
+  NetflixOriginals: [],
+  Trending: [],
+  TopRated: [],
+  ActionMovies: [],
+  ComedyMovies: [],
+  HorrorMovies: [],
+  RomanceMovies: [],
+  Documentaries: [],
+};
 
 export const getTheMovies = (state = movies, action) => {
   switch (action.type) {

@@ -9,6 +9,7 @@ const base_Url = "https://image.tmdb.org/t/p/original/";
 function Row({ title, isLargeRow, action, category }) {
   const [trailerUrl, setTrailerUrl] = useState("");
   const movies = useSelector((state) => state.getTheMovies);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -42,7 +43,7 @@ function Row({ title, isLargeRow, action, category }) {
     <div className="row">
       <h2>{title}</h2>
       <div className="row__posters">
-        {movies.NetflixOriginals.map((movie) => {
+        {movies[category].map((movie) => {
           return (
             <img
               key={movie.id}
