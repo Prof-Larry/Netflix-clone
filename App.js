@@ -1,7 +1,7 @@
 App.js:
 
 import React, { useState } from 'react';
-import Login from './components/Login'
+import Login from './components/Login';
 
 import Nav from './components/Nav';
 import {
