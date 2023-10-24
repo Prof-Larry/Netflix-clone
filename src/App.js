@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Login from "./components/Login";
-import "./App.css";
-import Row from "./components/Row";
-import Banner from "./components/Banner";
-import Nav from "./components/Nav";
-import { Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
+import Login from './components/Login';
+import './App.css';
+import Row from './components/Row';
+import Banner from './components/Banner';
+import Nav from './components/Nav';
+import { Routes, Route } from 'react-router-dom';
 import {
   fetchNetflixOriginals,
   fetchTrending,
