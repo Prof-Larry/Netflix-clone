@@ -1,19 +1,13 @@
-.login__form__btn {
-  background-color: #e50914;
-  border-radius: 4px;
-  font-size: 18px;
-  font-weight: 700;
-  margin: 24px 0 12px;
-  width: 100%;
-  border: none;
-  color: white;
-  height: 48px;
-  cursor: pointer;
+.login {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
 }
-/* comment added */
 
-.login__form__btn:hover {
-  background-color: #da0610;
+.login::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
