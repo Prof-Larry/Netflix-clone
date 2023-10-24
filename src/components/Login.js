@@ -43,8 +43,9 @@ function Login() {
                 className="login__form__btn"
                 type="submit"
                 onClick={handleSubmit}
+                style={{ backgroundColor: "blue", borderRadius: "20px" }}
               >
-                Sign In
+                login
               </button>
               <div className="login__form__utility">
                 <div className="login__form__remember">
