@@ -1,8 +1,9 @@
+import React, { useState } from "react";
+import Login from "./components/Login";
 import "./App.css";
 import Row from "./components/Row";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
-import Login from "./components/Login";
 import { Routes, Route } from "react-router-dom";
 import {
   fetchNetflixOriginals,
@@ -14,6 +15,32 @@ import {
   fetchRomanceMovies,
   fetchDocumentaries,
 } from "./actions/index";
+import Login from "./components/Login";
+import Nav from "./components/Nav";
+import {
+  fetchNetflixOriginals,
+  fetchTrending,
+  fetchTopRated,
+  fetchActionMovies,
+  fetchComedyMovies,
+  fetchHorrorMovies,
+  fetchRomanceMovies,
+  fetchDocumentaries,
+} from "./actions/index";
+import { Routes, Route } from "react-router-dom";
+import Login from './components/Login';
+import Nav from './components/Nav';
+import {
+  fetchNetflixOriginals,
+  fetchTrending,
+  fetchTopRated,
+  fetchActionMovies,
+  fetchComedyMovies,
+  fetchHorrorMovies,
+  fetchRomanceMovies,
+  fetchDocumentaries,
+} from './actions/index';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
