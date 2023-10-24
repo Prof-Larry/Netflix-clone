@@ -15,6 +15,19 @@ import {
   fetchRomanceMovies,
   fetchDocumentaries,
 } from "./actions/index";
+import Login from "./components/Login";
+import Nav from "./components/Nav";
+import {
+  fetchNetflixOriginals,
+  fetchTrending,
+  fetchTopRated,
+  fetchActionMovies,
+  fetchComedyMovies,
+  fetchHorrorMovies,
+  fetchRomanceMovies,
+  fetchDocumentaries,
+} from "./actions/index";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
