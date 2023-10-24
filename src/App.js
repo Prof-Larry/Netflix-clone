@@ -1,8 +1,20 @@
-import React, { useState } from "react";
-import Login from "./components/Login";
+import React, { useState } from 'react';
+import Login from './components/Login';
 import "./App.css";
 import Row from "./components/Row";
 import Banner from "./components/Banner";
+import Nav from "./components/Nav";
+import { Routes, Route } from "react-router-dom";
+import {
+  fetchNetflixOriginals,
+  fetchTrending,
+  fetchTopRated,
+  fetchActionMovies,
+  fetchComedyMovies,
+  fetchHorrorMovies,
+  fetchRomanceMovies,
+  fetchDocumentaries,
+} from "./actions/index";
 import Nav from "./components/Nav";
 import { Routes, Route } from "react-router-dom";
 import {
